@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0 auto;
+    @apply font-sans text-[#101828];
+    background:
+      radial-gradient(circle at 80% 15%, #eef4ff 0, transparent 30%),
+      linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  }
+  .container {
+  width: min(100% - 40px, 940px);
+  padding: 0 120px;
+}
+}
+
+@theme {
+  --color-logo-blue: #007BFF;
+  --color-logo-purple-mid: #6F42C1;
+  --color-logo-purple: #B624FF;
+}
+
+@layer component{
+  .li-header{
+    @apply h-full cursor-pointer flex flex-col
+
+  }
+  .li-header a{
+    @apply h-full flex items-center
+  }
+  /* .li-header:hover{
+    @apply border-b-[3px] border-solid border-b-logo-blue
+  } */
+
+  .li-header span{
+    @apply w-full h-1 rounded-t-full opacity-0 transition duration-300 ease-in-out bg-blue-500
+  }
+  .li-header:hover span{
+    @apply opacity-100
+  }
+}
+
