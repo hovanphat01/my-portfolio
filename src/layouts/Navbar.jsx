@@ -1,3 +1,4 @@
+import logoPortfolio from "../assets/icons/logo-portfolio.svg"
 function Navbar() {
   const menuItems = [
     { label: "Giới thiệu", href: "/" },
@@ -16,9 +17,9 @@ function Navbar() {
           <div
             className="h-[32px] w-[32px] bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple"
             style={{
-              mask: "url(/src/assets/icons/logo-portfolio.svg) center/contain no-repeat",
+              mask:`url('${logoPortfolio}') center/contain no-repeat`,
               WebkitMask:
-                "url(/src/assets/icons/logo-portfolio.svg) center/contain no-repeat",
+                `url("${logoPortfolio}") center/contain no-repeat`,
             }}
           />
           <span>Portfolio</span>
