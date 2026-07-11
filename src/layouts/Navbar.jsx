@@ -1,5 +1,8 @@
-import logoPortfolio from "../assets/icons/logo-portfolio.svg"
+import logoPortfolio from "../assets/icons/logo-portfolio.svg";
+import iconMenu from "../assets/icons/icon-menu.svg";
+import { useState } from "react";
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
   const menuItems = [
     { label: "Giới thiệu", href: "/" },
     { label: "Kỹ năng", href: "/" },
@@ -9,31 +12,52 @@ function Navbar() {
 
   return (
     <header className="w-full h-[74px] bg-[#f4f7fd] border-b-2 border-solid border-b-[#e6edf7]">
-      <nav className="h-full flex items-center justify-around">
-        <a
-          href="/"
-          className="flex gap-2 font-bold text-2xl bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple bg-clip-text text-transparent"
-        >
-          <div
-            className="h-[32px] w-[32px] bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple"
-            style={{
-              mask:`url('${logoPortfolio}') center/contain no-repeat`,
-              WebkitMask:
-                `url("${logoPortfolio}") center/contain no-repeat`,
-            }}
-          />
-          <span>Portfolio</span>
-        </a>
-        <ul className="flex gap-8 font-medium text-slate-700 h-full">
-            {
-                menuItems.map((item, index) => (
-                    <li key={index} className="li-header">
-                        <a href={item.href}>{item.label}</a>
-                        <span></span>
-                    </li>
-                ))
-            }
-        </ul>
+      <nav className="relative h-full">
+        <div className="flex h-full items-center justify-between px-10 md:justify-around">
+          <a
+            href="/"
+            className="flex gap-2 font-bold text-2xl bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple bg-clip-text text-transparent"
+          >
+            <div
+              className="h-[32px] w-[32px] bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple"
+              style={{
+                mask: `url("${logoPortfolio}") center/contain no-repeat`,
+                WebkitMask: `url("${logoPortfolio}") center/contain no-repeat`,
+              }}
+            />
+            <span>Portfolio</span>
+          </a>
+          <ul className="hidden md:flex gap-8 font-medium text-slate-700 h-full">
+            {menuItems.map((item, index) => (
+              <li key={index} className="li-header">
+                <a href={item.href}>{item.label}</a>
+                <span></span>
+              </li>
+            ))}
+          </ul>
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="block p-2 hover:bg-gray-200 md:hidden group rounded-lg focus:outline-none">
+            <div
+              className="h-[32px] w-[32px] bg-gray-600 group-hover:bg-gray-900 transition-colors"
+              style={{
+                mask: `url("${iconMenu}") center/contain no-repeat`,
+                WebkitMask: `url("${iconMenu}") center/contain no-repeat`,
+              }}
+            ></div>
+          </button>
+        </div>
+
+        <div className={`${isOpen ? 'block' : 'hidden'} md:hidden absolute top-[72px] px-10 w-full bg-white border-b border-gray-200 shadow-md z-50`}>
+          <ul className="font-medium text-slate-700 h-full">
+            {menuItems.map((item, index) => (
+              <li key={index} className="py-2">
+                <a href={item.href}>{item.label}</a>
+                <span></span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );

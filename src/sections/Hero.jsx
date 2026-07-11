@@ -61,7 +61,7 @@ function Hero() {
 
       <div className="relative w-1/2  px-20">
         <img 
-          src="/src/assets/images/1.jpg" 
+          src="/public/images/1.jpg" 
           alt="Ảnh chân dung" 
           className="w-[300px] h-full object-cover rounded-3xl absolute right-0 shadow-2xl" 
         />

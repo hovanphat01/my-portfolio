@@ -4,7 +4,7 @@ import Section from "./components/Section";
 
 function App() {
   return (
-    <div className="max-w-full">
+    <div>
         <Navbar/>
         <Section/>
         <Footer/>
