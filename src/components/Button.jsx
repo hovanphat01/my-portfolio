@@ -1,3 +1,6 @@
+import btnXemDuAn from "../assets/icons/icon-rocket.svg"
+import btnTaiCV from "../assets/icons/icon-download.svg"
+
 function Button({ label, icon ,variant, onClick }) {
   const styleButton ={
     project: "py-3 px-5 border rounded-[10px] bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple text-gray-300 transition-opacity duration-300 hover:opacity-80",
@@ -5,8 +8,8 @@ function Button({ label, icon ,variant, onClick }) {
     default: "py-3 px-5 border rounded-[10px] bg-gray-500 hover:bg-gray-600 text-white",
   }
   const sourceIcon = {
-    rocket:"/src/assets/icons/icon-rocket.svg",
-    download:"/src/assets/icons/icon-download.svg",
+    rocket: btnXemDuAn,
+    download: btnTaiCV,
     default:""
   }
   const selectIcon = sourceIcon[icon] || sourceIcon.default
@@ -16,9 +19,9 @@ function Button({ label, icon ,variant, onClick }) {
       <div
         className="bg-current h-[20px] w-[20px]"
         style={{
-           mask: `url(${selectIcon}) center/contain no-repeat`,
+            mask: `url("${selectIcon}") center/contain no-repeat`,
             WebkitMask:
-                `url(${selectIcon}) center/contain no-repeat`,
+                `url("${selectIcon}") center/contain no-repeat`,
         }}
       ></div>
       {label}

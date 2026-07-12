@@ -13,13 +13,13 @@ function Navbar() {
   return (
     <header className="w-full h-[74px] bg-[#f4f7fd] border-b-2 border-solid border-b-[#e6edf7]">
       <nav className="relative h-full">
-        <div className="flex h-full items-center justify-between px-10 md:justify-around">
+        <div className="div-nav">
           <a
             href="/"
-            className="flex gap-2 font-bold text-2xl bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple bg-clip-text text-transparent"
+            className="link-logo"
           >
             <div
-              className="h-[32px] w-[32px] bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple"
+              className="icon-logo"
               style={{
                 mask: `url("${logoPortfolio}") center/contain no-repeat`,
                 WebkitMask: `url("${logoPortfolio}") center/contain no-repeat`,
@@ -27,7 +27,7 @@ function Navbar() {
             />
             <span>Portfolio</span>
           </a>
-          <ul className="hidden md:flex gap-8 font-medium text-slate-700 h-full">
+          <ul className=" hidden lg:flex gap-8 font-medium text-slate-700 h-full">
             {menuItems.map((item, index) => (
               <li key={index} className="li-header">
                 <a href={item.href}>{item.label}</a>
@@ -37,7 +37,7 @@ function Navbar() {
           </ul>
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="block p-2 hover:bg-gray-200 md:hidden group rounded-lg focus:outline-none">
+            className="btn-nav group">
             <div
               className="h-[32px] w-[32px] bg-gray-600 group-hover:bg-gray-900 transition-colors"
               style={{
@@ -48,7 +48,7 @@ function Navbar() {
           </button>
         </div>
 
-        <div className={`${isOpen ? 'block' : 'hidden'} md:hidden absolute top-[72px] px-10 w-full bg-white border-b border-gray-200 shadow-md z-50`}>
+        <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden absolute top-[72px] px-10 w-full bg-white border-b border-gray-200 shadow-md z-50 `}>
           <ul className="font-medium text-slate-700 h-full">
             {menuItems.map((item, index) => (
               <li key={index} className="py-2">
