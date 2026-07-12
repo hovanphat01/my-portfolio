@@ -82,10 +82,22 @@
     }
   }
   .hero-info h1{
-    @apply flex flex-col items-center ;
+    @apply flex flex-col items-center font-bold py-4 text-3xl;
 
+    @media(min-width: 768px){
+      @apply text-5xl;
+    };
     @media (min-width: 1024px) {
       @apply items-start;
+    }
+  }
+
+  .hero-info h1 > span{
+    @apply bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple 
+            bg-clip-text text-transparent text-4xl;
+    
+    @media (min-width: 768px) {
+      @apply text-7xl;
     }
   }
 

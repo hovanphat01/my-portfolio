@@ -11,11 +11,9 @@ function Hero() {
           <span className="w-2 h-2 bg-blue-600 rounded-4xl"></span>
           FULLSTACK DEVELOPER
         </span>
-        <h1 className="text-5xl font-bold py-4 flex flex-col items-center">
+        <h1>
           Xin chào, tôi là <br />
-          <span className="bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple bg-clip-text text-transparent text-7xl">
-            Hồ Văn Phát
-          </span>
+          <span> Hồ Văn Phát</span>
         </h1>
         <p className="py-3 text-gray-400 text-justify">
           Tôi là sinh viên năm cuối với niềm đam mê xây dựng các ứng dụng web
