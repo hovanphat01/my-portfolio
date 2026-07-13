@@ -12,15 +12,7 @@
     width: min(100% - 40px, 940px);
     padding:0 50px;
 
-    @media (min-width: 768px) {
-      margin: 0 auto;
-      width: min(100% - 40px, 940px);
-      padding: 0 100px;
-    }
-
     @media (min-width: 1024px) {
-      margin: 0 auto;
-      width: min(100% - 40px, 940px);
       padding: 0 120px;
     }
   }
@@ -113,7 +105,7 @@
   }
 
   .img-avatar{
-    @apply object-cover rounded-3xl  shadow-2xl;
+    @apply object-cover rounded-3xl  shadow-2xl w-[350px];
     @media (min-width: 1024px) {
       @apply w-[350px] h-full absolute right-0;
     }
@@ -125,6 +117,62 @@
 
     @media (min-width: 1024px) {
       @apply  left-auto translate-x-0 right-20;
+    }
+  }
+
+  .div-about{
+    @apply flex flex-col  border rounded-[12px] py-5  shadow-sm border-gray-200;
+
+    @media (min-width: 1024px){
+      @apply flex flex-row;
+    }
+  }
+  .icon-about{
+    @apply flex gap-3 pl-5;
+
+    @media (min-width: 1024px){
+      @apply w-3/4 ;
+    }
+  }
+
+  .content-about{
+    @apply text-gray-500 text-justify px-5 pt-5;
+
+    @media (min-width: 1024px){
+      @apply  pr-8;
+    }    
+  }
+
+  .list-items{
+    @apply flex gap-3 ;
+
+     @media (min-width: 1024px) {
+      @apply px-2;
+    }
+  }
+
+  .item-skills{
+    @apply flex flex-none 
+          gap-2 border items-center
+           px-3 py-2 rounded-[10px] 
+           border-gray-300 shadow
+           whitespace-nowrap;
+
+  }
+
+  .btn-left{
+    @apply hidden;
+
+    @media (min-width: 1024px) {
+      @apply block text-2xl px-2 border border-gray-300 rounded-[7px] text-gray-500 ;
+    }
+  }
+
+  .btn-right{
+    @apply hidden;
+
+    @media (min-width: 1024px) {
+      @apply block text-2xl text-gray-500 px-2 border border-gray-300 rounded-[7px];
     }
   }
 
