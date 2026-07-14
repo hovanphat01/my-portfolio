@@ -10,7 +10,7 @@
   .container {
     margin: 0 auto;
     width: min(100% - 40px, 940px);
-    padding:0 50px;
+    padding: 0 50px;
 
     @media (min-width: 1024px) {
       padding: 0 120px;
@@ -66,28 +66,28 @@
   }
 
   /* Hero */
-  .hero-info{
-    @apply flex flex-col items-center ;
+  .hero-info {
+    @apply flex flex-col items-center;
 
     @media (min-width: 1024px) {
       @apply w-1/2 items-start;
     }
   }
-  .hero-info h1{
+  .hero-info h1 {
     @apply flex flex-col items-center font-bold py-4 text-3xl;
 
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
       @apply text-5xl;
-    };
+    }
     @media (min-width: 1024px) {
       @apply items-start;
     }
   }
 
-  .hero-info h1 > span{
+  .hero-info h1 > span {
     @apply bg-gradient-to-r from-logo-blue via-logo-purple-mid to-logo-purple 
             bg-clip-text text-transparent text-4xl;
-    
+
     @media (min-width: 768px) {
       @apply text-7xl;
     }
@@ -97,83 +97,124 @@
     @apply inline-flex items-center w-fit gap-2 text-sm bg-blue-50/50 text-blue-600 border border-blue-300 rounded-3xl px-3 py-1 font-semibold tracking-wider;
   }
 
-  .div-avatar{
+  .div-avatar {
     @apply relative flex justify-center items-center w-full;
     @media (min-width: 1024px) {
       @apply w-1/2 items-start px-20;
     }
   }
 
-  .img-avatar{
+  .img-avatar {
     @apply object-cover rounded-3xl  shadow-2xl w-[350px];
     @media (min-width: 1024px) {
       @apply w-[350px] h-full absolute right-0;
     }
   }
 
-  .hero-state{
-    @apply  absolute flex  bottom-5 items-center gap-2 bg-black/40  backdrop-blur-md text-white text-sm px-4 py-2 rounded-full border border-white/10;
-  
+  .hero-state {
+    @apply absolute flex  bottom-5 items-center gap-2 bg-black/40  backdrop-blur-md text-white text-sm px-4 py-2 rounded-full border border-white/10;
 
     @media (min-width: 1024px) {
-      @apply  left-auto translate-x-0 right-20;
+      @apply left-auto translate-x-0 right-20;
     }
   }
 
-  .div-about{
+  .div-about {
     @apply flex flex-col  border rounded-[12px] py-5  shadow-sm border-gray-200;
 
-    @media (min-width: 1024px){
+    @media (min-width: 1024px) {
       @apply flex flex-row;
     }
   }
-  .icon-about{
+  .icon-about {
     @apply flex gap-3 pl-5;
 
-    @media (min-width: 1024px){
-      @apply w-3/4 ;
+    @media (min-width: 1024px) {
+      @apply w-3/4;
     }
   }
 
-  .content-about{
+  .content-about {
     @apply text-gray-500 text-justify px-5 pt-5;
 
-    @media (min-width: 1024px){
-      @apply  pr-8;
-    }    
+    @media (min-width: 1024px) {
+      @apply pr-8;
+    }
   }
 
-  .list-items{
-    @apply flex gap-3 ;
+  .list-items {
+    @apply flex gap-3  flex-wrap;
 
-     @media (min-width: 1024px) {
+    @media (min-width: 1024px) {
       @apply px-2;
     }
   }
 
-  .item-skills{
-    @apply flex flex-none 
+  .item-skills {
+    @apply flex flex-none
           gap-2 border items-center
            px-3 py-2 rounded-[10px] 
            border-gray-300 shadow
            whitespace-nowrap;
-
   }
 
-  .btn-left{
+  .list-card {
+    @apply flex flex-col gap-5;
+
+    @media (min-width: 1024px) {
+      @apply flex-row overflow-x-auto scroll-smooth;
+    }
+  }
+  .item-card {
+    @apply flex flex-col border border-gray-200 rounded-2xl shadow flex-shrink-0;
+
+    @media (min-width: 768px) {
+      @apply flex-row;
+    }
+
+    @media (min-width: 1024px) {
+      @apply w-[325px] h-auto flex-col;
+    }
+  }
+  .link-card {
     @apply hidden;
 
     @media (min-width: 1024px) {
-      @apply block text-2xl px-2 border border-gray-300 rounded-[7px] text-gray-500 ;
+      @apply block w-full h-full  hover:opacity-65;
     }
   }
 
-  .btn-right{
-    @apply hidden;
-
+  .img-card {
+    @apply w-auto h-[250px];
     @media (min-width: 1024px) {
-      @apply block text-2xl text-gray-500 px-2 border border-gray-300 rounded-[7px];
+      @apply w-[250px] h-[150px];
     }
   }
 
+  .content-card {
+    @media (max-width: 1023px) {
+      @apply p-[14px];
+    }
+  }
+
+  .div-contact {
+    @apply flex flex-col;
+    @media (min-width: 768px) {
+      @apply flex flex-row;
+    }
+  }
+
+  .link-contact {
+    @apply flex flex-col;
+
+    @media (min-width: 640px) {
+      @apply flex-row;
+    }
+    @media (min-width: 768px) {
+      @apply flex-col;
+    }
+    @media (min-width: 1024px) {
+      @apply flex-row;
+    }
+  }
 }

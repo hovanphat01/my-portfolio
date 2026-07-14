@@ -2,6 +2,8 @@ import Hero from "../sections/Hero";
 import AboutMe from "../sections/About";
 import Skills from "../sections/Skills"
 import Projects from "../sections/Projects";
+import Stats from "../sections/Stats";
+import Contact from "../sections/Contact"
 
 
 function Section() {
@@ -11,6 +13,8 @@ function Section() {
             <AboutMe/>
             <Skills/>
             <Projects/>
+            <Stats/>
+            <Contact/>
         </main>
     )
 }

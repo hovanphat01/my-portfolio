@@ -7,7 +7,6 @@ import iconGit from "../assets/icons/logo-git.png";
 import iconTailwind from "../assets/icons/logo-Tailwind_CSS.png";
 import iconSQL from "../assets/icons/logo-mysql.png";
 import iconCode from "../assets/icons/icon-code.svg";
-import { useRef } from "react";
 function Skills() {
   const listSkills = [
     { id: 1, image: iconHTML, label: "HTML" },
@@ -26,40 +25,7 @@ function Skills() {
       image: iconSQL,
       label: "MySQL",
     },
-    {
-      id: 9,
-      image: iconSQL,
-      label: "MySQL",
-    },
-    {
-      id: 10,
-      image: iconSQL,
-      label: "MySQL",
-    },
-    {
-      id:11,
-      image: iconSQL,
-      label: "MySQL",
-    },
   ];
-
-  const scrollRef = useRef(null);
-  // Hàm xử lý cuộn sang trái/phải
-  const scroll = (direction) => {
-
-    if (scrollRef.current) {
-      const {scrollLeft, clientWidth} = scrollRef.current;
-      const scrollTo = direction === 'left' 
-            ? scrollLeft - clientWidth / 2 
-            : scrollLeft + clientWidth / 2;
-
-      scrollRef.current.scrollTo({
-        left: scrollTo,
-        behavior: 'smooth',
-      })
-    }
-  };
-
 
   return (
     <section className="container mt-7">
@@ -76,16 +42,8 @@ function Skills() {
         </div>
 
         <div className="pt-4 flex">
-          <div className="btn-left">
-            <button
-              onClick={() => scroll('left')}
-              className="hover:cursor-pointer"
-            >{'<'}</button>
-          </div>
           <ul
-            ref={scrollRef}
-            className="list-items overflow-x-auto scrollbar-hide scroll-smooth"
-            style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
+            className="list-items"
           >
             {listSkills.map((item) => (
               <li key={item.id} className="item-skills">
@@ -94,12 +52,6 @@ function Skills() {
               </li>
             ))}
           </ul>
-          <div className="btn-right">
-            <button
-              onClick={() => scroll('right')}
-              className="hover:cursor-pointer"
-            >{'>'}</button>
-          </div>
         </div>
       </div>
     </section>
