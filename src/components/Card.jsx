@@ -10,7 +10,7 @@ function Card() {
           alt=""
           className="img-card rounded-3xl "
         />
-        <a href="/" className="link-card hover:pointer-coarse">
+        <a href="https://hovanphat01.github.io/my-portfolio/" target="_blank" className="link-card hover:pointer-coarse">
           <div
             className="w-[30px] h-[30px] bg-gray-700"
             style={{
@@ -45,7 +45,7 @@ function Card() {
             </li>
           </ul>
         </div>
-        <a className="lg:hidden flex text-[14px] px-[14px] underline justify-center text-gray-500" href="https://hovanphat01.github.io/my-portfolio/">
+        <a className="lg:hidden flex text-[14px] px-[14px] underline justify-center text-gray-500" href="https://hovanphat01.github.io/my-portfolio/" target="_blank">
             https://hovanphat01.github.io/my-portfolio/
         </a>
       </div>

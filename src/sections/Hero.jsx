@@ -3,7 +3,11 @@ import imageAvatar from "../assets/images/1.jpg";
 import iconGitub from "../assets/icons/icon-github.svg";
 import iconLinkedin from "../assets/icons/icon-linkedin.svg";
 import iconEnvelope from "../assets/icons/icon-envelope.svg";
+import fileCV from "../public/cv/HoVanPhat_Software-Developer-Intern_VN.pdf"
 function Hero() {
+  const xemDuAn = () =>
+    (window.location.href = "https://github.com/hovanphat01");
+
   return (
     <section className="container flex  flex-col lg:flex-row">
       <div className="hero-info ">
@@ -28,19 +32,21 @@ function Hero() {
             label="Xem dự án"
             icon="rocket"
             variant="project"
-            onClick={() => console.log("Xem dự án")}
+            onClick={xemDuAn}
           />
-          <Button
-            label="Tải CV"
-            icon="download"
-            variant="CV"
-            onClick={() => console.log("Tải CV")}
-          />
+          <a href={fileCV} download="HoVanPhat_Software-Developer-Intern.pdf">
+            <Button
+              label="Tải CV"
+              icon="download"
+              variant="CV"
+            />
+          </a>
         </div>
         <div className="flex gap-4 py-5">
           <a
-            href="https://github.com/"
+            href="https://github.com/hovanphat01"
             className="w-10 h-10 hover:opacity-75 transition duration-300"
+            target="_blank"
           >
             <div
               className="bg-[#788397] w-full h-full"
@@ -51,8 +57,9 @@ function Hero() {
             ></div>
           </a>
           <a
-            href="https://vn.linkedin.com/"
+            href="https://www.linkedin.com/in/ho-phat-193b33264/"
             className="w-10 h-10 hover:opacity-75 transition duration-300"
+            target="_blank"
           >
             <div
               className="bg-[#788397] w-full h-full"
@@ -63,8 +70,9 @@ function Hero() {
             ></div>
           </a>
           <a
-            href="https://www.google.com/"
+            href="https://mail.google.com/mail/?extsrc=mailto&url=mailto:hovanphat00@gmail.com"
             className="w-10 h-10 hover:opacity-75 transition duration-300"
+            target="_blank"
           >
             <div
               className="bg-[#788397] w-full h-full"
@@ -79,11 +87,7 @@ function Hero() {
 
       {/* This is Avatar  */}
       <div className="div-avatar">
-        <img
-          src={imageAvatar}
-          alt="Ảnh chân dung"
-          className="img-avatar "
-        />
+        <img src={imageAvatar} alt="Ảnh chân dung" className="img-avatar " />
         <div className="hero-state">
           <span className="w-3 h-3 bg-green-500 rounded-full"></span>
           Sẵn sàng làm việc

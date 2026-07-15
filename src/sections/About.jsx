@@ -1,7 +1,7 @@
 import iconAbout from "../assets/icons/icon-about.svg"
 function AboutMe() {
   return (
-    <section className="container mt-10">
+    <section id="about" className="container mt-10">
       <div className="div-about">
         <div className="icon-about">
           <div className="bg-gray-200 rounded-4xl h-12 w-12 flex justify-center items-center">

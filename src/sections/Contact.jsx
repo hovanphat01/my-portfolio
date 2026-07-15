@@ -3,7 +3,7 @@ import iconEmail from "../assets/icons/icon-envelope.svg"
 import iconGithub from "../assets/icons/icon-github.svg"
 function Contact() {
   return (
-    <section className="container mt-7">
+    <section id="contact" className="container mt-7">
       <div className="div-contact items-center gap-3 w-full h-auto px-5 py-5 border border-gray-300 rounded-xl shadow">
         <div>
           <div className="flex gap-3">

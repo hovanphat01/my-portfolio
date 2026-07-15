@@ -2,7 +2,7 @@ import Card from "../components/Card";
 import iconProject from "../assets/icons/icon-folder-open.svg";
 function Projects() {
   return (
-    <section className="container mt-7">
+    <section id="project" className="container mt-7">
       <div className="w-full">
         <div className="flex gap-2 pb-3">
           <div

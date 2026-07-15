@@ -4,10 +4,10 @@ import { useState } from "react";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const menuItems = [
-    { label: "Giới thiệu", href: "/" },
-    { label: "Kỹ năng", href: "/" },
-    { label: "Dự án", href: "/" },
-    { label: "Liên Hệ", href: "/" },
+    { label: "Giới thiệu", href: "#about" },
+    { label: "Kỹ năng", href: "#skills" },
+    { label: "Dự án", href: "#project" },
+    { label: "Liên Hệ", href: "#contact" },
   ];
 
   return (

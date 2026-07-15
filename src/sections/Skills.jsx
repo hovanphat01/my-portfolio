@@ -28,7 +28,7 @@ function Skills() {
   ];
 
   return (
-    <section className="container mt-7">
+    <section id="skills" className="container mt-7">
       <div className="w-full">
         <div className="flex gap-2">
           <div
